@@ -40,6 +40,24 @@ const Menu=[
         category:"breakfast"
     },
     {
+        id:"Pancake with Honey",
+        name:5,
+        image:pancake,
+        category:"breakfast"
+    },
+    {
+        id:"Pancake with Honey",
+        name:5,
+        image:pancake,
+        category:"breakfast"
+    },
+    {
+        id:"Pancake with Honey",
+        name:5,
+        image:pancake,
+        category:"breakfast"
+    },
+    {
         id:"Katti Roll",
         name:6,
         image:roll,
@@ -62,6 +80,18 @@ const Menu=[
         name:9,
         image:hotdog,
         category:"lunch"
+    },
+    {
+        id:"Hot-Dog",
+        name:9,
+        image:hotdog,
+        category:"timepass"
+    },
+    {
+        id:"Hot-Dog",
+        name:9,
+        image:hotdog,
+        category:"snacks"
     }
 
 ]
