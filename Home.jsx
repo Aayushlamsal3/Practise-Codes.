@@ -1,37 +1,37 @@
 import React, { useState } from 'react'
-import Menu from "./Menu"
-import Cards from './Cards'
-import Buttons from './Buttons'
+import Buttons from './Buttons';
+import Cards from "./Cards"
+import Menu from './Menu';
 
 const Home = () => {
 
-  const newDatas=[...new Set(Menu.map((New)=>{
-    return New.category;
-  })),"all"]
-  console.log(newDatas)
+  const CategoryItems= [...new Set(Menu.map((value,ind)=>{
+    return value.category
+  }))]
+  console.log(CategoryItems)
 
   const[Items,SetItems]=useState(Menu)
 
-  const[Second,SetSecond]=useState(newDatas)
-  
 
-  const SelectedItems=(selected)=>{
-
-    if(selected==="all"){
-       return SetItems(Menu)
-    }
-
-    const UpdatedData= Menu.filter((PureData)=>{
-     return PureData.category===selected;
+  const FilterItems=(AlongData)=>{
+    const UpdatedData=Menu.filter((Filterate,Index)=>{
+      return Filterate.category === AlongData
     })
     SetItems(UpdatedData)
   }
-  return (
-    <div className='container container-fluid'>
-<Buttons SelectedItems={SelectedItems} Second={Second} />
-<Cards items={Items}/>
+
+  const[Second,SetSecond]=useState(CategoryItems)
+
+  return(
+    <>
+    <div>
+<Buttons Filter={FilterItems} Second={Second}  />
     </div>
+    <Cards items={Items} />
+
+    </>
   )
 }
 
-export default Home
+export default Home;
+
