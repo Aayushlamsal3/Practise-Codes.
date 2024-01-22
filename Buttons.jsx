@@ -1,16 +1,12 @@
 import React from 'react'
 
-const Buttons = ({SelectedItems,Second}) => {
-  return (
-    <div>
-
-        {Second.map((CurrElem)=>{
-            return <button className='btn btn-warning' onClick={()=>SelectedItems(CurrElem)} >{CurrElem}</button>
-        })}
-          <div>
-    </div>
-    </div>
-  )
+const Buttons = ({Filter,Second}) => {
+  return(
+    <>
+    {Second.map((value,ind)=>{
+      return     <button className='btn btn-primary' onClick={()=>Filter(value)} >{value}</button>
+    })}
+  </>
+)
 }
-
 export default Buttons;
